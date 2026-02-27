@@ -34,7 +34,7 @@ function App() {
 
   const { messages, sendMessage, status } = useChat({
     transport: new DefaultChatTransport({
-      api: 'http://localhost:8000/qa/stream',
+      api: `${import.meta.env.BACKEND_URL}/qa/stream`,
     }),
     body: {
       thread_id: threadId,
